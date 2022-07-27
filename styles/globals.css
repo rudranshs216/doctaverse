@@ -1,9 +1,7 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-.MuiSvgIcon{
-    font-size: 50px;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html{
     scroll-behavior: smooth;
 }
