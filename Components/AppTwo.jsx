@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const AppTwo = ({imgSrc,heading, paragraph}) => {
   return (
     <div className='h-full py-10 lg:py-20 w-full flex flex-col justify-around items-center lg:h-full lg:flex-row-reverse'>

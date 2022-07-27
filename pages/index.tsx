@@ -20,7 +20,7 @@ const Home: NextPage = () => {
       <div>
         <Navbar />
 
-      <div className='h-full pb-10 pt-20 lg:py-20 w-full bg-[#0084ff] flex flex-col justify-around items-center flex-wrap lg:h-full lg:flex-row'>
+      {/* <div className='h-full pb-10 pt-20 lg:py-20 w-full bg-[#0084ff] flex flex-col justify-around items-center flex-wrap lg:h-full lg:flex-row'>
             <img className='w-[100%] max-w-[500px]' src="assets/images/main.png" />
             <div className="w-[100%] mt-10 p-4 sm:w-[500px] lg:mt-0">
                 <h1 className='text-white text-3xl font-bold md:text-4xl lg:text-5xl'>One and Only Place for All Doctors Tool</h1>
@@ -37,7 +37,7 @@ const Home: NextPage = () => {
 
             </div>
 
-        </div>
+        </div> */}
         <Feature />
         <AppOne imgSrc="assets/images/dashboard.png" heading="Doctor's Dashboard" paragraph="Plateform for doctors to see 10 patients in 1 hour and can genrate prescription just by their voice" />
         <AppTwo imgSrc="assets/images/cal.png" heading="Medical Calculator" paragraph="All the pediatric calculators which students use on a day to day basis. Calculators like GIR calculation, Pediatric BP Centiles (Hypertension), Anthropometry,Hyponatremic dehydration calculation,etc are part of this app. Pediatric Medical Students can calculate any value within 5 minutes." />

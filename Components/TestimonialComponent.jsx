@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const TestimonialComponent = () => {
   return (
   <div className='bg-[#eceef1] md:py-20 py-12 px-6 md:px-16'>

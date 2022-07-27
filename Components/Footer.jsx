@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Footer = () => {
   return (
     <div className='pt-16  flex flex-col justify-center items-center'>

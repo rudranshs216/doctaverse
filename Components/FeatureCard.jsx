@@ -1,6 +1,7 @@
 import React from 'react'
 
 
+
 const FeatureCard = ({ imgSrc, heading}) => {
     return (
         <div className='m-2 w-[300px] relative top-0 hover:top-[-10px] ease-in-out duration-300 cursor-pointer p-4 border-[1px] flex flex-col justify-center items-center'>
