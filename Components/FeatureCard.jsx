@@ -1,5 +1,4 @@
 import React from 'react'
-import AccessAlarmOutlinedIcon from '@mui/icons-material/AccessAlarmOutlined';
 
 
 const FeatureCard = ({ imgSrc, heading}) => {
