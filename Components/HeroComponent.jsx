@@ -1,10 +1,11 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const HeroComponent = () => {
     return (
         <div className='h-full pb-10 pt-20 lg:py-20 w-full bg-[#0084ff] flex flex-col justify-around items-center flex-wrap lg:h-full lg:flex-row'>
-            <img className='w-[100%] max-w-[500px]' src="assets/images/main.png" />
+            <Image className='w-[100%] max-w-[500px]' src="assets/images/main.png" />
             <div className="w-[100%] mt-10 p-4 sm:w-[500px] lg:mt-0">
                 <h1 className='text-white text-3xl font-bold md:text-4xl lg:text-5xl'>One and Only Place for All Doctors Tool</h1>
                 <p className='text-white text-l my-5 font-semibold md:text-xl lg:text-2xl'>Doctaverse app includes all the medical tools needed by a pediatrician on duty.</p>

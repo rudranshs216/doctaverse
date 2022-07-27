@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
-        <HeroComponent />
+        <h1 className='text-5xl underline'>Hello</h1>
       </div>
 
     </>
