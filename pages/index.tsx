@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import HeroComponent from "../Components/HeroComponent"
-import Nav from '../Components/Nav'
 
 
 const Home: NextPage = () => {
@@ -32,6 +31,7 @@ const Home: NextPage = () => {
             </div>
 
         </div>
+        <HeroComponent />
       </div>
 
     </>
