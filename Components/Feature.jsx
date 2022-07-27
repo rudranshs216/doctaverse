@@ -10,7 +10,7 @@ import LocalHospitalRoundedIcon from '@mui/icons-material/LocalHospitalRounded';
 
 const Feature = () => {
   return (
-    <div className='py-16 flex flex-col items-center'>
+    <div id="about" className='py-24 flex flex-col items-center'>
         <h1 className='text-center text-3xl md:text-5xl font-bold'>What's Great About Docta-Verse?</h1>
         <div className='pt-16 flex flex-wrap justify-evenly xl:w-[1100px]'>
             <FeatureCard imgSrc={<DashboardCustomizeRoundedIcon className='w-[50px] h-[50px]'/>} heading ="Doctors Dashboard"  />
