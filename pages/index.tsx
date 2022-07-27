@@ -123,15 +123,15 @@ const Home: NextPage = () => {
             {/* <FeatureCard imgSrc={<DashboardCustomizeRoundedIcon className='w-[50px] h-[50px]' />} heading="Doctors Dashboard" /> */}
             <div className='m-2 w-[300px] relative top-0 hover:top-[-10px] ease-in-out duration-300 cursor-pointer p-4 border-[1px] flex flex-col justify-center items-center'>
             <div className='flex flex-col items-center'>
-             <DashboardCustomizeRoundedIcon className='w-[50px] h-[50px]'/>
+             <DashboardCustomizeRoundedIcon className='MuiSvgIcon'/>
                 <h1 className='text-xl mt-6 md:text-2xl font-bold'>Doctors Dashboard</h1>
             </div>
         </div>
-            <FeatureCard imgSrc={<CalculateRoundedIcon className='w-[50px] h-[50px]' />} heading="Medical Calculators" />
-            <FeatureCard imgSrc={<VaccinesRoundedIcon className='w-[50px] h-[50px]' />} heading="Drug Index" />
-            <FeatureCard imgSrc={<DescriptionRoundedIcon className='w-[50px] h-[50px]' />} heading="Diagnostic Algorithm" />
-            <FeatureCard imgSrc={<LocalHospitalRoundedIcon className='w-[50px] h-[50px]' />} heading="Treatment Algorithm" />
-            <FeatureCard imgSrc={<PeopleRoundedIcon className='w-[50px] h-[50px]' />} heading="Community of Doctors" />
+            <FeatureCard imgSrc={<CalculateRoundedIcon className='MuiSvgIcon' />} heading="Medical Calculators" />
+            <FeatureCard imgSrc={<VaccinesRoundedIcon className='MuiSvgIcon' />} heading="Drug Index" />
+            <FeatureCard imgSrc={<DescriptionRoundedIcon className='MuiSvgIcon' />} heading="Diagnostic Algorithm" />
+            <FeatureCard imgSrc={<LocalHospitalRoundedIcon className='MuiSvgIcon' />} heading="Treatment Algorithm" />
+            <FeatureCard imgSrc={<PeopleRoundedIcon className='MuiSvgIcon' />} heading="Community of Doctors" />
           </div>
         </div>
         <div className='h-full py-10 lg:py-20 w-full flex flex-col justify-around items-center lg:h-full lg:flex-row'>
