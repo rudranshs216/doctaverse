@@ -123,15 +123,15 @@ const Home: NextPage = () => {
             {/* <FeatureCard imgSrc={<DashboardCustomizeRoundedIcon className='w-[50px] h-[50px]' />} heading="Doctors Dashboard" /> */}
             <div className='m-2 w-[300px] relative top-0 hover:top-[-10px] ease-in-out duration-300 cursor-pointer p-4 border-[1px] flex flex-col justify-center items-center'>
             <div className='flex flex-col items-center'>
-             <DashboardCustomizeRoundedIcon className='MuiSvgIcon'/>
+             <DashboardCustomizeRoundedIcon fontSize='large'/>
                 <h1 className='text-xl mt-6 md:text-2xl font-bold'>Doctors Dashboard</h1>
             </div>
         </div>
-            <FeatureCard imgSrc={<CalculateRoundedIcon className='MuiSvgIcon' />} heading="Medical Calculators" />
-            <FeatureCard imgSrc={<VaccinesRoundedIcon className='MuiSvgIcon' />} heading="Drug Index" />
-            <FeatureCard imgSrc={<DescriptionRoundedIcon className='MuiSvgIcon' />} heading="Diagnostic Algorithm" />
-            <FeatureCard imgSrc={<LocalHospitalRoundedIcon className='MuiSvgIcon' />} heading="Treatment Algorithm" />
-            <FeatureCard imgSrc={<PeopleRoundedIcon className='MuiSvgIcon' />} heading="Community of Doctors" />
+            <FeatureCard imgSrc={<CalculateRoundedIcon fontSize='large' />} heading="Medical Calculators" />
+            <FeatureCard imgSrc={<VaccinesRoundedIcon fontSize='large' />} heading="Drug Index" />
+            <FeatureCard imgSrc={<DescriptionRoundedIcon fontSize='large' />} heading="Diagnostic Algorithm" />
+            <FeatureCard imgSrc={<LocalHospitalRoundedIcon fontSize='large' />} heading="Treatment Algorithm" />
+            <FeatureCard imgSrc={<PeopleRoundedIcon fontSize='large' />} heading="Community of Doctors" />
           </div>
         </div>
         <div className='h-full py-10 lg:py-20 w-full flex flex-col justify-around items-center lg:h-full lg:flex-row'>
