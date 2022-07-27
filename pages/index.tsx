@@ -14,9 +14,30 @@ import VaccinesRoundedIcon from '@mui/icons-material/VaccinesRounded';
 import DescriptionRoundedIcon from '@mui/icons-material/DescriptionRounded';
 import PeopleRoundedIcon from '@mui/icons-material/PeopleRounded';
 import LocalHospitalRoundedIcon from '@mui/icons-material/LocalHospitalRounded';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import { useEffect, useState } from 'react'
 
 
 const Home: NextPage = () => {
+  const [nav, setNav] = useState(false);
+  const [color, setColor] = useState('transparent');
+  const [textColor, setTextColor] = useState('white');
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
+
+  useEffect(() => {
+    const changeColor = () => {
+      if (window.scrollY >= 80) {
+        setColor('#0084ff');
+      } else {
+        setColor('transparent');
+      }
+    };
+    window.addEventListener('scroll', changeColor);
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,6 +45,58 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
+        <div
+          style={{ backgroundColor: `${color}` }}
+          className={`fixed left-0 top-0 w-full z-10 ease-in duration-300 ${color === "transparent" ? "" : "shadow-md"}`}
+        >
+          <div className='max-w-[1240px] m-auto flex justify-between items-center p-4 text-white'>
+            <Link href='/'>
+              <h1 style={{ color: `${textColor}` }} className='font-bold text-4xl'>
+                DoctaVerse
+              </h1>
+            </Link>
+            <ul style={{ color: `${textColor}` }} className='hidden sm:flex'>
+              <li className='p-4'>
+                <Link href='/'>Home</Link>
+              </li>
+              <li className='p-4'>
+                <Link href='#about'>About</Link>
+              </li>
+              {/* <li className='p-4'>
+            <Link href='/blog'>Blog</Link>
+          </li> */}
+            </ul>
+
+            {/* Mobile Button */}
+            <div onClick={handleNav} className='block sm:hidden z-10'>
+              {nav ? (
+                <AiOutlineClose size={20} style={{ color: `${textColor}` }} />
+              ) : (
+                <AiOutlineMenu size={20} style={{ color: `${textColor}` }} />
+              )}
+            </div>
+            {/* Mobile Menu */}
+            <div
+              className={
+                nav
+                  ? 'sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
+                  : 'sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300'
+              }
+            >
+              <ul>
+                <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+                  <Link href='/'>Home</Link>
+                </li>
+                <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+                  <Link href='#about'>About</Link>
+                </li>
+                {/* <li onClick={handleNav} className='p-4 text-4xl hover:text-gray-500'>
+              <Link href='/blog'>Blog</Link>
+            </li> */}
+              </ul>
+            </div>
+          </div>
+        </div>
         {/* <HeroComponent /> */}
         <div className='h-full pb-10 pt-20 lg:py-20 w-full bg-[#0084ff] flex flex-col justify-around items-center flex-wrap lg:h-full lg:flex-row'>
           <img className='w-[100%] max-w-[500px]' src="assets/images/main.png" />
@@ -47,7 +120,13 @@ const Home: NextPage = () => {
         <div id="about" className='py-24 flex flex-col items-center'>
           <h1 className='text-center text-3xl md:text-5xl font-bold'>What's Great About Docta-Verse?</h1>
           <div className='pt-16 flex flex-wrap justify-evenly xl:w-[1100px]'>
-            <FeatureCard imgSrc={<DashboardCustomizeRoundedIcon className='w-[50px] h-[50px]' />} heading="Doctors Dashboard" />
+            {/* <FeatureCard imgSrc={<DashboardCustomizeRoundedIcon className='w-[50px] h-[50px]' />} heading="Doctors Dashboard" /> */}
+            <div className='m-2 w-[300px] relative top-0 hover:top-[-10px] ease-in-out duration-300 cursor-pointer p-4 border-[1px] flex flex-col justify-center items-center'>
+            <div className='flex flex-col items-center'>
+             <DashboardCustomizeRoundedIcon className='w-[50px] h-[50px]'/>
+                <h1 className='text-xl mt-6 md:text-2xl font-bold'>Doctors Dashboard</h1>
+            </div>
+        </div>
             <FeatureCard imgSrc={<CalculateRoundedIcon className='w-[50px] h-[50px]' />} heading="Medical Calculators" />
             <FeatureCard imgSrc={<VaccinesRoundedIcon className='w-[50px] h-[50px]' />} heading="Drug Index" />
             <FeatureCard imgSrc={<DescriptionRoundedIcon className='w-[50px] h-[50px]' />} heading="Diagnostic Algorithm" />
